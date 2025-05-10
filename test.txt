@@ -1,0 +1,16 @@
+.:
+total 4
+-rw-rw-r-- 1 martin martin    0 mei 10 15:14 test.txt
+drwxrwxr-x 3 martin martin 4096 mei 10 15:12 tools
+
+./tools:
+total 4
+drwxrwxr-x 3 martin martin 4096 mei 10 15:12 windows
+
+./tools/windows:
+total 4
+drwxrwxr-x 2 martin martin 4096 mei 10 15:14 msi
+
+./tools/windows/msi:
+total 4
+-rw-rw-r-- 1 martin martin 229 mei 10 15:13 mview6.wxs
