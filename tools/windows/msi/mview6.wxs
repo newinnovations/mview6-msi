@@ -14,15 +14,27 @@
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="ProgramFilesFolder">
         <Directory Id="INSTALLFOLDER" Name="MView6 Installation Folder">
-          <Component Id="ProductComponent">
-            <File KeyPath="yes" Source="mview6-windows\bin\MView6.exe"></File>
-          </Component>
+          <Directory Id="BinFolder" Name="bin">
+            <Component Id="MainExecutable">
+              <File Id="RustExe" Source="mview6-windows\bin\MView6.exe" />
+            </Component>
+          </Directory>
+          <Directory Id="LibFolder" Name="lib">
+            <Directory Id="LibFolder2" Name="gdk-pixbuf-2.0">
+              <Directory Id="LibFolder3" Name="2.10.0">
+                <Directory Id="LibFolder4" Name="loaders">
+                  <Component Id="ExtraFileComponent">
+                    <File Id="ExtraFile1" Source="mview6-windows\lib\gdk-pixbuf-2.0\2.10.0\loaders\pixbufloader_svg.dll" />
+                  </Component>
+                </Directory>
+              </Directory>
+            </Directory>
         </Directory>
       </Directory>
     </Directory>
 
-    <Feature Id="HelloWorldFeature">
-      <ComponentRef Id="ProductComponent" />
+    <Feature Id="MainFeature" Title="MView6 App Feature" Level="1">
+      <ComponentRef Id="MainExecutable" />
     </Feature>
 
   </Product>
