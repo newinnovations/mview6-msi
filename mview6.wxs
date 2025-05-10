@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="69c966bc-c892-421f-a9d0-749e21a0745a" Name="MView6" Language="1033" Version="1.0.0.0" Manufacturer="NewInnovations" UpgradeCode="a9cb11ac-70d0-4a50-9577-438a21ad676a">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine"/>
+    <MediaTemplate EmbedCab="yes"/>
+    <Icon Id="MView6Icon" SourceFile="resources/mview6.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="MView6Icon"/>
+    <Feature Id="ProductFeature" Title="MView6" Level="1">
+      <ComponentRef Id="ApplicationShortcut"/>
+      <ComponentRef Id="Comp_File_xml2_16"/>
+      <ComponentRef Id="Comp_File_ffi_8"/>
+      <ComponentRef Id="Comp_File_iconv"/>
+      <ComponentRef Id="Comp_File_intl"/>
+      <ComponentRef Id="Comp_File_fribidi_0"/>
+      <ComponentRef Id="Comp_File_jpeg62"/>
+      <ComponentRef Id="Comp_File_gobject_2_0_0"/>
+      <ComponentRef Id="Comp_File_cairo_script_interpreter_2"/>
+      <ComponentRef Id="Comp_File_cairo_2"/>
+      <ComponentRef Id="Comp_File_pangocairo_1_0_0"/>
+      <ComponentRef Id="Comp_File_freetype_6"/>
+      <ComponentRef Id="Comp_File_harfbuzz"/>
+      <ComponentRef Id="Comp_File_pcre2_8_0"/>
+      <ComponentRef Id="Comp_File_libpng16"/>
+      <ComponentRef Id="Comp_File_zlib1"/>
+      <ComponentRef Id="Comp_File_MView6"/>
+      <ComponentRef Id="Comp_File_pango_1_0_0"/>
+      <ComponentRef Id="Comp_File_gio_2_0_0"/>
+      <ComponentRef Id="Comp_File_pixman_1_0"/>
+      <ComponentRef Id="Comp_File_graphene_1_0_0"/>
+      <ComponentRef Id="Comp_File_rsvg_2_2"/>
+      <ComponentRef Id="Comp_File_glib_2_0_0"/>
+      <ComponentRef Id="Comp_File_gtk_4_1"/>
+      <ComponentRef Id="Comp_File_tiff"/>
+      <ComponentRef Id="Comp_File_gdk_pixbuf_2_0_0"/>
+      <ComponentRef Id="Comp_File_harfbuzz_subset"/>
+      <ComponentRef Id="Comp_File_gmodule_2_0_0"/>
+      <ComponentRef Id="Comp_File_pangowin32_1_0_0"/>
+      <ComponentRef Id="Comp_File_epoxy_0"/>
+      <ComponentRef Id="Comp_File_cairo_gobject_2"/>
+      <ComponentRef Id="Comp_File_loaders"/>
+      <ComponentRef Id="Comp_File_pixbufloader_svg"/>
+    </Feature>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="MView6">
+          <Directory Id="Dir_bin" Name="bin">
+            <Component Id="Comp_File_xml2_16" Guid="*">
+              <File Id="File_xml2_16" Source="mview6-windows/bin/xml2-16.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_ffi_8" Guid="*">
+              <File Id="File_ffi_8" Source="mview6-windows/bin/ffi-8.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_iconv" Guid="*">
+              <File Id="File_iconv" Source="mview6-windows/bin/iconv.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_intl" Guid="*">
+              <File Id="File_intl" Source="mview6-windows/bin/intl.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_fribidi_0" Guid="*">
+              <File Id="File_fribidi_0" Source="mview6-windows/bin/fribidi-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_jpeg62" Guid="*">
+              <File Id="File_jpeg62" Source="mview6-windows/bin/jpeg62.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_gobject_2_0_0" Guid="*">
+              <File Id="File_gobject_2_0_0" Source="mview6-windows/bin/gobject-2.0-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_cairo_script_interpreter_2" Guid="*">
+              <File Id="File_cairo_script_interpreter_2" Source="mview6-windows/bin/cairo-script-interpreter-2.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_cairo_2" Guid="*">
+              <File Id="File_cairo_2" Source="mview6-windows/bin/cairo-2.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_pangocairo_1_0_0" Guid="*">
+              <File Id="File_pangocairo_1_0_0" Source="mview6-windows/bin/pangocairo-1.0-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_freetype_6" Guid="*">
+              <File Id="File_freetype_6" Source="mview6-windows/bin/freetype-6.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_harfbuzz" Guid="*">
+              <File Id="File_harfbuzz" Source="mview6-windows/bin/harfbuzz.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_pcre2_8_0" Guid="*">
+              <File Id="File_pcre2_8_0" Source="mview6-windows/bin/pcre2-8-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_libpng16" Guid="*">
+              <File Id="File_libpng16" Source="mview6-windows/bin/libpng16.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_zlib1" Guid="*">
+              <File Id="File_zlib1" Source="mview6-windows/bin/zlib1.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_MView6" Guid="*">
+              <File Id="File_MView6" Source="mview6-windows/bin/MView6.exe" KeyPath="yes"/>
+              <File Id="File_MView6Icon" Source="resources/mview6.ico"/>
+              <ProgId Id="MView6.jpgfile" Description="MView6" Icon="File_MView6Icon">
+                <Extension Id="jpg" ContentType="image/jpeg">
+                  <Verb Id="open_jpg" Command="Open" TargetFile="File_MView6" Argument="&quot;%1&quot;"/>
+                </Extension>
+                <Extension Id="jpeg" ContentType="image/jpeg">
+                  <Verb Id="open_jpeg" Command="Open" TargetFile="File_MView6" Argument="&quot;%1&quot;"/>
+                </Extension>
+              </ProgId>
+              <RegistryKey Root="HKCR" Key="MView6.jpgfile\shell\open\command">
+                <RegistryValue Type="string" Value="[INSTALLFOLDER]bin\MView6.exe &quot;%1&quot;"/>
+              </RegistryKey>
+              <ProgId Id="MView6.pngfile" Description="MView6" Icon="File_MView6Icon">
+                <Extension Id="png" ContentType="image/png">
+                  <Verb Id="open_png" Command="Open" TargetFile="File_MView6" Argument="&quot;%1&quot;"/>
+                </Extension>
+              </ProgId>
+              <RegistryKey Root="HKCR" Key="MView6.pngfile\shell\open\command">
+                <RegistryValue Type="string" Value="[INSTALLFOLDER]bin\MView6.exe &quot;%1&quot;"/>
+              </RegistryKey>
+              <ProgId Id="MView6.giffile" Description="MView6" Icon="File_MView6Icon">
+                <Extension Id="gif" ContentType="image/gif">
+                  <Verb Id="open_gif" Command="Open" TargetFile="File_MView6" Argument="&quot;%1&quot;"/>
+                </Extension>
+              </ProgId>
+              <RegistryKey Root="HKCR" Key="MView6.giffile\shell\open\command">
+                <RegistryValue Type="string" Value="[INSTALLFOLDER]bin\MView6.exe &quot;%1&quot;"/>
+              </RegistryKey>
+              <ProgId Id="MView6.aviffile" Description="MView6" Icon="File_MView6Icon">
+                <Extension Id="avif" ContentType="image/avif">
+                  <Verb Id="open_avif" Command="Open" TargetFile="File_MView6" Argument="&quot;%1&quot;"/>
+                </Extension>
+              </ProgId>
+              <RegistryKey Root="HKCR" Key="MView6.aviffile\shell\open\command">
+                <RegistryValue Type="string" Value="[INSTALLFOLDER]bin\MView6.exe &quot;%1&quot;"/>
+              </RegistryKey>
+              <ProgId Id="MView6.heicfile" Description="MView6" Icon="File_MView6Icon">
+                <Extension Id="heic" ContentType="image/heic">
+                  <Verb Id="open_heic" Command="Open" TargetFile="File_MView6" Argument="&quot;%1&quot;"/>
+                </Extension>
+              </ProgId>
+              <RegistryKey Root="HKCR" Key="MView6.heicfile\shell\open\command">
+                <RegistryValue Type="string" Value="[INSTALLFOLDER]bin\MView6.exe &quot;%1&quot;"/>
+              </RegistryKey>
+              <ProgId Id="MView6.webpfile" Description="MView6" Icon="File_MView6Icon">
+                <Extension Id="webp" ContentType="image/webp">
+                  <Verb Id="open_webp" Command="Open" TargetFile="File_MView6" Argument="&quot;%1&quot;"/>
+                </Extension>
+              </ProgId>
+              <RegistryKey Root="HKCR" Key="MView6.webpfile\shell\open\command">
+                <RegistryValue Type="string" Value="[INSTALLFOLDER]bin\MView6.exe &quot;%1&quot;"/>
+              </RegistryKey>
+              <ProgId Id="MView6.svgfile" Description="MView6" Icon="File_MView6Icon">
+                <Extension Id="svg" ContentType="image/svg+xml">
+                  <Verb Id="open_svg" Command="Open" TargetFile="File_MView6" Argument="&quot;%1&quot;"/>
+                </Extension>
+                <Extension Id="svgz" ContentType="image/svg+xml">
+                  <Verb Id="open_svgz" Command="Open" TargetFile="File_MView6" Argument="&quot;%1&quot;"/>
+                </Extension>
+              </ProgId>
+              <RegistryKey Root="HKCR" Key="MView6.svgfile\shell\open\command">
+                <RegistryValue Type="string" Value="[INSTALLFOLDER]bin\MView6.exe &quot;%1&quot;"/>
+              </RegistryKey>
+              <ProgId Id="MView6.pdffile" Description="MView6" Icon="File_MView6Icon">
+                <Extension Id="pdf" ContentType="application/pdf">
+                  <Verb Id="open_pdf" Command="Open" TargetFile="File_MView6" Argument="&quot;%1&quot;"/>
+                </Extension>
+              </ProgId>
+              <RegistryKey Root="HKCR" Key="MView6.pdffile\shell\open\command">
+                <RegistryValue Type="string" Value="[INSTALLFOLDER]bin\MView6.exe &quot;%1&quot;"/>
+              </RegistryKey>
+              <ProgId Id="MView6.epubfile" Description="MView6" Icon="File_MView6Icon">
+                <Extension Id="epub" ContentType="application/epub+zip">
+                  <Verb Id="open_epub" Command="Open" TargetFile="File_MView6" Argument="&quot;%1&quot;"/>
+                </Extension>
+              </ProgId>
+              <RegistryKey Root="HKCR" Key="MView6.epubfile\shell\open\command">
+                <RegistryValue Type="string" Value="[INSTALLFOLDER]bin\MView6.exe &quot;%1&quot;"/>
+              </RegistryKey>
+            </Component>
+            <Component Id="Comp_File_pango_1_0_0" Guid="*">
+              <File Id="File_pango_1_0_0" Source="mview6-windows/bin/pango-1.0-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_gio_2_0_0" Guid="*">
+              <File Id="File_gio_2_0_0" Source="mview6-windows/bin/gio-2.0-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_pixman_1_0" Guid="*">
+              <File Id="File_pixman_1_0" Source="mview6-windows/bin/pixman-1-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_graphene_1_0_0" Guid="*">
+              <File Id="File_graphene_1_0_0" Source="mview6-windows/bin/graphene-1.0-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_rsvg_2_2" Guid="*">
+              <File Id="File_rsvg_2_2" Source="mview6-windows/bin/rsvg-2-2.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_glib_2_0_0" Guid="*">
+              <File Id="File_glib_2_0_0" Source="mview6-windows/bin/glib-2.0-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_gtk_4_1" Guid="*">
+              <File Id="File_gtk_4_1" Source="mview6-windows/bin/gtk-4-1.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_tiff" Guid="*">
+              <File Id="File_tiff" Source="mview6-windows/bin/tiff.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_gdk_pixbuf_2_0_0" Guid="*">
+              <File Id="File_gdk_pixbuf_2_0_0" Source="mview6-windows/bin/gdk_pixbuf-2.0-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_harfbuzz_subset" Guid="*">
+              <File Id="File_harfbuzz_subset" Source="mview6-windows/bin/harfbuzz-subset.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_gmodule_2_0_0" Guid="*">
+              <File Id="File_gmodule_2_0_0" Source="mview6-windows/bin/gmodule-2.0-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_pangowin32_1_0_0" Guid="*">
+              <File Id="File_pangowin32_1_0_0" Source="mview6-windows/bin/pangowin32-1.0-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_epoxy_0" Guid="*">
+              <File Id="File_epoxy_0" Source="mview6-windows/bin/epoxy-0.dll" KeyPath="yes"/>
+            </Component>
+            <Component Id="Comp_File_cairo_gobject_2" Guid="*">
+              <File Id="File_cairo_gobject_2" Source="mview6-windows/bin/cairo-gobject-2.dll" KeyPath="yes"/>
+            </Component>
+          </Directory>
+          <Directory Id="Dir_lib" Name="lib">
+            <Directory Id="Dir_gdk_pixbuf_2_0_1" Name="gdk-pixbuf-2.0">
+              <Directory Id="Dir_2_10_0_2" Name="2.10.0">
+                <Component Id="Comp_File_loaders" Guid="*">
+                  <File Id="File_loaders" Source="mview6-windows/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache" KeyPath="yes"/>
+                </Component>
+                <Directory Id="Dir_loaders_3" Name="loaders">
+                  <Component Id="Comp_File_pixbufloader_svg" Guid="*">
+                    <File Id="File_pixbufloader_svg" Source="mview6-windows/lib/gdk-pixbuf-2.0/2.10.0/loaders/pixbufloader_svg.dll" KeyPath="yes"/>
+                  </Component>
+                </Directory>
+              </Directory>
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="MView6">
+          <Component Id="ApplicationShortcut" Guid="*">
+            <Shortcut Id="ApplicationStartMenuShortcut" Name="MView6" Description="Launch MView6 Application" Target="[INSTALLFOLDER]bin\MView6.exe" WorkingDirectory="INSTALLFOLDER"/>
+            <RegistryValue Root="HKCU" Key="Software\MView6" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+            <RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall"/>
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Product>
+</Wix>
