@@ -4,7 +4,8 @@
            Language="1033"
            Manufacturer="NewInnovations"
            Name="MView6"
-           Version="1.0.0.0">
+           Version="1.0.0.0"
+           UpgradeCode="2c131b81-5fae-4c71-bad8-9c6c6c48f093">
 
     <Package InstallScope="perMachine" Compressed="yes" />
 

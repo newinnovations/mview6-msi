@@ -20,12 +20,11 @@ jobs:
 
       - name: Compile WiX Source (.wxs)
         run: |
-          candle tools\windows\msi\mview6.wxs
-          candle --version
+          candle -out mview6.wixobj tools\windows\msi\mview6.wxs
 
       - name: Create MSI Package
         run: |
-          light tools\windows\msi\mview6.wixobj -out myinstaller.msi
+          light mview6.wixobj -out myinstaller.msi
 
       - name: Upload MSI as Artifact
         uses: actions/upload-artifact@v4
