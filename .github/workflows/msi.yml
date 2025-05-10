@@ -7,16 +7,19 @@ jobs:
   build:
     runs-on: windows-2022
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Install WiX Toolset
-        run: |
-          dotnet tool install --global wix --version 6.0.0
-          wix --version
+      # - name: Install WiX Toolset
+      #   run: |
+      #     dotnet tool install --global wix --version 6.0.0
+      #     wix --version
 
       - name: Compile WiX Source (.wxs)
         run: |
@@ -24,10 +27,27 @@ jobs:
 
       - name: Create MSI Package
         run: |
-          light mview6.wixobj -out myinstaller.msi
+          light mview6.wixobj -out mview6.msi
 
       - name: Upload MSI as Artifact
         uses: actions/upload-artifact@v4
         with:
           name: MSI-Installer
-          path: myinstaller.msi
+          path: mview6.msi
+
+      - name: Determine current date
+        id: date
+        shell: bash
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Release
+        uses: ncipollo/release-action@v1
+        with:
+          name: ${{ steps.date.outputs.date }}
+          commit: ${{ github.sha }}
+          tag: ${{ steps.date.outputs.date }}
+          body: Windows installer for MView6 (${{ steps.date.outputs.date }})
+          makeLatest: true
+          allowUpdates: true
+          replacesArtifacts: true
+          artifacts: "*.msi"
